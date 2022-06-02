@@ -1,6 +1,11 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+/**
+ * App function
+ * @return {JSX}
+ */
 function App() {
   return (
     <div className="App">
