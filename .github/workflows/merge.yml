@@ -8,7 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v3
+    - name: Checkout branch
+      uses: actions/checkout@v3
     - name: Merge
       uses: everlytic/branch-merge@1.1.2
       with:
