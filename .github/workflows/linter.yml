@@ -10,13 +10,12 @@ jobs:
 	build:
 		runs-on: ubuntu-latest
 	steps:
-	- uses: action/checkout@v2
-	- uses: actions/setup-node@v1
-		with:
-			node-version: 14
+	- uses: action/checkout@v3
+	- uses: actions/setup-node@v3
+	  with:
+	    node-version: 14
 	- run: npm ci
 	- uses: wearerequired/lint-action@v1
-		with:
-			eslint: true
-			prettier: true
-
+	  with:
+	    eslint: true
+	    prettier: true
