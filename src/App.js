@@ -27,11 +27,10 @@ function App() {
   );
 }
 
-  function very_badFormating(){
-    const bad = 0;
-    bad = 1;
-    console.log(bad)
-    const another_bad = () => {};
-  
-          }
+function very_badFormating() {
+  const bad = 0;
+  bad = 1;
+  console.log(bad);
+  const another_bad = () => {};
+}
 export default App;
