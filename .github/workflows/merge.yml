@@ -7,13 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  steps:
-    - name: Checkout branch
-      uses: actions/checkout@v3
-    - name: Merge
-      uses: everlytic/branch-merge@1.1.2
-      with:
-        github_token: ${{ github.token }}
-        source_ref: ${{ github.ref }}
-        target_branch: 'main'
-        commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: everlytic/branch-merge@1.1.2
+        with:
+          github_token: ${{ github.token }}
+          source_ref: ${{ github.ref }}
+          target_branch: 'main'
+          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'

@@ -9,16 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  steps:
-    - name: Checkout branch
-      uses: actions/checkout@v3
-    - name: Setup node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 14
-    - run: npm ci
-    - name: Lint
-      uses: wearerequired/lint-action@v1
-      with:
-        eslint: true
-        prettier: true
+    steps:
+      - uses: action/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - run: npm ci
+      - uses: wearerequired/lint-action@v1
+        with:
+          eslint: true
+          prettier: true
